@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Project redGrid</title>
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <style>
+
+        body {
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 16;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #BDFFF3, #4AC29A);
+            user-select: none;
+        }
+
+        .menu {
+            border: black solid 2px;
+            border-radius: 0.5em;
+            padding: 2.5px 2.5px 2.5px 2.5px;
+            margin: 2.5px 2.5px 2.5px 2.5px;
+            height: 100%;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            background-color: white;
+        }
+
+        .menu-header {
+            text-align: left;
+            border-bottom: black solid 1px;
+            padding-left: 10px;
+        }
+
+        .main-game {
+            display: flex;
+        }
+
+        #stat-name {
+            border: black 1px solid;
+            text-align: center;
+        }
+
+        #stats-menu {
+            width: 250px;
+            height: 205px;
+            text-align: center;
+        }
+
+        #inv-menu {
+            width: 250px;
+            height: 365px;
+        }
+
+        #battle-menu {
+            width: 659px;
+            height: 400px;
+        }
+
+        #drops-menu {
+            width: 659px;
+            height: 170px;
+        }
+
+        #log-menu {
+            width: 400px;
+            height: 581px;
+        }
+
+        .menu-container {
+            border: black solid 1px;
+        }
+
+        div.menu-container:hover {
+            color: white;
+            background-color: black;
+        }
+
+        #equ-row {
+            display: flex;
+        }
+
+        #equ-item {
+            text-align: center;
+            width: 50%;
+        }
+
+        .inv-container {
+            margin: 10px;
+        }
+
+        #inv-item {
+            margin: 0px 0.5px 0px 0.5px;
+            border-bottom: dotted black 1px;
+        }
+
+        .log-container {
+            margin: 10px 5px 10px 5px;
+        }
+
+        #log-item {
+            margin: 2.5px 0px 2.5px 0px;
+            user-select: text;
+        }
+
+    </style>
+    <body>
+        <div class="main-game">
+
+            <div class="left-menu">
+
+                <div id='stats-menu' class="menu">
+                    <div class="menu-header">Stats</div>
+                    <div class="stat-containers">
+                        <div class="stat-name" style="background-color: rgb(168, 59, 123);">Title</div>
+                        <div class="stat-name" style="background-color: rgb(126, 231, 126);">Level</div>
+                        <div class="stat-name" style="background-color: rgb(196, 47, 47);">HP</div>
+                        <div class="menu-container" style="margin: 3px 0px 2px 0px;">
+                            <div id="equ-row">
+                                <div id="equ-item">Head</div>
+                                <div id="equ-item">Body</div>
+                            </div>
+                            <div id="equ-row">
+                                <div id="equ-item">Legs</div>
+                                <div id="equ-item">Feet</div>
+                            </div>
+                            <div id="equ-row">
+                                <div id="equ-item">Trinket</div>
+                                <div id="equ-item">Trinket</div>
+                            </div>
+                            <div id="equ-row">
+                                <div id="equ-item">L Hand</div>
+                                <div id="equ-item">R Hand</div>
+                            </div>
+                        </div>
+                        <div class="menu-container" style="margin: 5px 0px 2px 0px;">
+                            <div id="equ-row">
+                                <div id="equ-item">Atk:</div>
+                                <div id="equ-item">Value</div>
+                                <div id="equ-item">Def:</div>
+                                <div id="equ-item">Value</div>
+                            </div>
+                            <div id="equ-row">
+                                <div id="equ-item">Con:</div>
+                                <div id="equ-item">Value</div>
+                                <div id="equ-item">Spd:</div>
+                                <div id="equ-item">Value</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='inv-menu' class="menu">
+                    <div class="menu-header">Inventory</div>
+                        <div class="inv-container">
+                            <div id="inv-item">test</div>
+                        </div>
+                </div>
+
+            </div>
+
+            <div class="mid-menu">
+                <div id='battle-menu' class="menu">
+                    <div class="menu-header">Battle</div>
+                </div>
+
+                <div id='drops-menu' class="menu">
+                    <div class="menu-header">Drops</div>
+                </div>
+            </div>
+
+            <div class="right-menu">
+                <div id='log-menu' class="menu">
+                    <div class="menu-header">Message Log</div>
+                        <div class="log-container">
+                            <div id="log-item">This is a test message log.</div>
+                            <div id="log-item">This is a very very very super duper mooper dooper booper hooper gooper looper mooper duper booper long test message log.</div>
+                            <div id="log-item">This is also a test message log.</div>
+                        </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </body>
+</html>
+<script src="jquery-3.7.1.min.js"></script>
