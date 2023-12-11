@@ -31,6 +31,10 @@
             padding-left: 10px;
         }
 
+        .menu-con {
+            margin: 5px;
+        }
+
         .main-game {
             display: flex;
         }
@@ -38,41 +42,6 @@
         #stat-name {
             border: black 1px solid;
             text-align: center;
-        }
-
-        #stats-menu {
-            width: 250px;
-            height: 205px;
-            text-align: center;
-        }
-
-        #inv-menu {
-            width: 250px;
-            height: 365px;
-        }
-
-        #battle-menu {
-            width: 659px;
-            height: 400px;
-        }
-
-        #drops-menu {
-            width: 659px;
-            height: 170px;
-        }
-
-        #log-menu {
-            width: 400px;
-            height: 581px;
-        }
-
-        .menu-container {
-            border: black solid 1px;
-        }
-
-        div.menu-container:hover {
-            color: white;
-            background-color: black;
         }
 
         #equ-row {
@@ -83,9 +52,10 @@
             text-align: center;
             width: 50%;
         }
-
-        .inv-container {
-            margin: 10px;
+        
+        #equ-item:hover {
+            color: white;
+            background-color: black;
         }
 
         #inv-item {
@@ -93,8 +63,22 @@
             border-bottom: dotted black 1px;
         }
 
-        .log-container {
-            margin: 10px 5px 10px 5px;
+        .enemy-stats {
+            border: black solid 2px;
+            width: 150px;
+            height: 250px;
+        }
+
+        .enemy-drops {
+            border: black solid 2px;
+            width: 150px;
+            height: 100px;
+        }
+
+        .enemy-main {
+            border: black solid 2px;
+            width: 400px;
+            height: 359px;
         }
 
         #log-item {
@@ -102,56 +86,58 @@
             user-select: text;
         }
 
+        
+
     </style>
     <body>
         <div class="main-game">
 
             <div class="left-menu">
 
-                <div id='stats-menu' class="menu">
+                <div id='stats-menu' class="menu" style="width: 250px; height: 205px; text-align: center;">
                     <div class="menu-header">Stats</div>
-                    <div class="stat-containers">
-                        <div class="stat-name" style="background-color: rgb(168, 59, 123);">Title</div>
-                        <div class="stat-name" style="background-color: rgb(126, 231, 126);">Level</div>
-                        <div class="stat-name" style="background-color: rgb(196, 47, 47);">HP</div>
-                        <div class="menu-container" style="margin: 3px 0px 2px 0px;">
-                            <div id="equ-row">
-                                <div id="equ-item">Head</div>
-                                <div id="equ-item">Body</div>
-                            </div>
-                            <div id="equ-row">
-                                <div id="equ-item">Legs</div>
-                                <div id="equ-item">Feet</div>
-                            </div>
-                            <div id="equ-row">
-                                <div id="equ-item">Trinket</div>
-                                <div id="equ-item">Trinket</div>
-                            </div>
-                            <div id="equ-row">
-                                <div id="equ-item">L Hand</div>
-                                <div id="equ-item">R Hand</div>
-                            </div>
+
+                    <div class="stat-name" style="background-color: rgb(168, 59, 123);">Title</div>
+                    <div class="stat-name" style="background-color: rgb(126, 231, 126);">Level</div>
+                    <div class="stat-name" style="background-color: rgb(196, 47, 47);">HP</div>
+                    
+                    <div class="stat-container" style="margin: 3px 0px 2px 0px; border: black solid 1px;">
+                        <div id="equ-row">
+                            <div id="equ-item">Head</div>
+                            <div id="equ-item">Body</div>
                         </div>
-                        <div class="menu-container" style="margin: 5px 0px 2px 0px;">
-                            <div id="equ-row">
-                                <div id="equ-item">Atk:</div>
-                                <div id="equ-item">Value</div>
-                                <div id="equ-item">Def:</div>
-                                <div id="equ-item">Value</div>
-                            </div>
-                            <div id="equ-row">
-                                <div id="equ-item">Con:</div>
-                                <div id="equ-item">Value</div>
-                                <div id="equ-item">Spd:</div>
-                                <div id="equ-item">Value</div>
-                            </div>
+                        <div id="equ-row">
+                            <div id="equ-item">Legs</div>
+                            <div id="equ-item">Feet</div>
+                        </div>
+                        <div id="equ-row">
+                            <div id="equ-item">Trinket</div>
+                            <div id="equ-item">Trinket</div>
+                        </div>
+                        <div id="equ-row">
+                            <div id="equ-item">L Hand</div>
+                            <div id="equ-item">R Hand</div>
+                        </div>
+                    </div>
+                    <div class="stat-container" style="margin: 5px 0px 2px 0px; border: black solid 1px;">
+                        <div id="equ-row">
+                            <div id="equ-item">Atk:</div>
+                            <div id="equ-item">Value</div>
+                            <div id="equ-item">Def:</div>
+                            <div id="equ-item">Value</div>
+                        </div>
+                        <div id="equ-row">
+                            <div id="equ-item">Con:</div>
+                            <div id="equ-item">Value</div>
+                            <div id="equ-item">Spd:</div>
+                            <div id="equ-item">Value</div>
                         </div>
                     </div>
                 </div>
 
-                <div id='inv-menu' class="menu">
+                <div id='inv-menu' class="menu" style="width: 250px; height: 365px;">
                     <div class="menu-header">Inventory</div>
-                        <div class="inv-container">
+                        <div class="menu-con" style="margin: 10px;">
                             <div id="inv-item">test</div>
                         </div>
                 </div>
@@ -159,21 +145,42 @@
             </div>
 
             <div class="mid-menu">
-                <div id='battle-menu' class="menu">
+                <div id='battle-menu' class="menu" style="width: 659px; height: 400px;">
                     <div class="menu-header">Battle</div>
+                        <div class="menu-con" style="display:flex";>
+                            <div class="menu-con">
+                                <div class="enemy-stats">
+
+                                </div>
+                                <div class="enemy-drops" style="margin: 5px 0px 0px 0px;">
+
+                                </div>
+                                
+                            </div>
+                            <div class="menu-con">
+                                <div class="enemy-main" style="text-align: center;">
+                                    <h3>Enemy Name Placeholder</h3>
+                                    <img width="200" height="200">
+
+                                </div>
+                            </div>
+                        </div>
                 </div>
 
-                <div id='drops-menu' class="menu">
+                <div id='drops-menu' class="menu" style="width: 659px; height: 170px;">
                     <div class="menu-header">Drops</div>
+                        <div class="menu-con">
+                            <p>test test</p>
+                        </div>
                 </div>
             </div>
 
             <div class="right-menu">
-                <div id='log-menu' class="menu">
+                <div id='log-menu' class="menu" style="width: 400px; height: 581px;">
                     <div class="menu-header">Message Log</div>
-                        <div class="log-container">
+                        <div class="menu-con" style="margin: 10px 5px 10px 5px;">
                             <div id="log-item">This is a test message log.</div>
-                            <div id="log-item">This is a very very very super duper mooper dooper booper hooper gooper looper mooper duper booper long test message log.</div>
+                            <div id="log-item">This is a very very very very very very very very very long test message log.</div>
                             <div id="log-item">This is also a test message log.</div>
                         </div>
                 </div>
